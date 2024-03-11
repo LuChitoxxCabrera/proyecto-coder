@@ -1,0 +1,148 @@
+/* Index */
+
+//Seccion Principal
+
+main {
+    .portada_index {
+        img {
+            width: 80%;
+            padding-top: 2rem;
+        }
+    }
+    
+    .portada_index {
+        background-color: $color_primario;
+        @include flex-box ();
+        flex-direction: column;
+        min-height: 70vh;
+        gap: 1rem;
+    }
+    
+    .texto_index {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .texto_index{
+        p {
+            text-align: justify;
+        }
+    }
+    
+    h1 {
+        span {
+            color: $color_button;
+            font-size: 3.5rem;
+        }
+    }
+
+    @include mq-tablet {
+        .portada_index {
+            padding-top: 2.3rem;
+            min-height: 75vh;
+            gap: 1.5rem;
+        }
+    
+        .texto_index {
+            padding-bottom: 2rem;
+        }
+    }
+
+    @include mq-desktop {
+        .portada_index {
+            img {
+                width: 50%;
+            }
+        }
+    
+        .portada_index {
+            padding-top: 0;
+            flex-direction: row;
+            gap: 1.5rem;        
+        }
+    
+        .texto_index {
+            width: 40%;
+            text-align: start;
+            align-items: start;
+            gap: 1rem;
+        }
+    }
+
+    //Seccion secundaria
+
+    .seccion_index {
+        img {
+            width: 80%;
+            padding-top: 2rem;
+        }
+    }
+    
+    .seccion_index {
+        background-color: $color_fondo_seccion1;
+        @include flex-box ();
+        flex-direction: column;
+        min-height: 80vh;
+        gap: 1rem;
+    }
+    
+    .texto_seccion_index {
+        width: 80%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .texto_seccion_index {
+        p {
+            text-align: justify;
+        }
+    }
+    
+    h2 {
+        span {
+            color: $color_button;
+            font-size: 3rem;
+        }
+    }
+
+    @include mq-tablet {
+        .seccion_index {
+            padding-top: 2.3rem;
+            min-height: 75vh;
+            gap: 1.5rem;
+        }
+    
+        .texto_seccion_index {
+            padding-bottom: 2rem;
+        }    
+    }
+
+    @include mq-desktop {
+        .seccion_index {
+            img {
+                width: 50%;
+            }   
+        }
+    
+        .seccion_index {
+            padding-top: 0;
+            flex-direction: row-reverse;
+            gap: 1.5rem;        
+        }
+    
+        .texto_seccion_index {
+            width: 40%;
+            text-align: end;
+            align-items: end;
+            gap: 1rem;
+        }
+    }
+}
+

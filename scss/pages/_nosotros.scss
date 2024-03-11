@@ -1,0 +1,58 @@
+/*Nosotros*/
+
+main {
+    .titulo {
+        text-decoration: underline;
+        padding: 10px;
+    }
+    
+    .parrafo_nosotros {
+        background-color: $color_fondo_links;
+        padding: 30px;
+        text-align: justify;
+    }
+    
+    .mision {
+        background-color: $color_primario;
+        @include flex-box ();
+        text-align: justify;
+        padding: 35px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .vision {
+        @include flex-box ();
+        text-align: justify;
+        padding: 35px;
+        flex-direction: column;
+        padding-bottom: 100px;
+        gap: 1rem;
+    }
+    
+    .img-article {
+        max-width: 75%;
+    }
+
+    @include mq-tablet {
+        .parrafo_nosotros {
+            padding: 10px 140px;
+            text-align: justify;
+            font-size: 20px;
+        }
+
+        .mision {
+            p {
+                width: 75%;
+                font-size: 20px;
+            }
+        }
+
+        .vision {
+            p {
+                width: 75%;
+                font-size: 20px;
+            }
+        }
+    }
+}

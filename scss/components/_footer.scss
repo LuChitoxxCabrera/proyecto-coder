@@ -1,0 +1,66 @@
+/*Footer*/
+
+footer {
+    .footer {
+        width: 100%;
+        background-color: $color_primario;
+        color: $color_text_footer;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer {
+        div {
+            img {
+                padding-bottom: 10px;
+            }
+        }
+    }
+    
+    .footer {
+        ul {
+            li {
+                a {
+                    color: $color_text_footer;
+                }
+            }
+        } 
+    }
+    
+    .logo_footer {
+        max-width: 100px;
+        padding-top: 10px;
+    }
+    
+    .suscribete {
+        padding-bottom: 10px;
+    }
+
+    @include mq-tablet {
+        .footer {
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 10px;  
+        }
+    
+        .redes_sociales {
+            ul {
+                li {
+                    display: inline;
+                    padding: 10px;
+                }
+            }
+        }
+    
+        .footer {
+            div {
+                width: 30%;
+            } 
+        }    
+    }
+}
+
+

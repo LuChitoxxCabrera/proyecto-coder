@@ -1,0 +1,117 @@
+/*Header*/
+
+header {
+    height: 150px;
+    background-color: $color_fondo_seccion1;
+    
+    .div {
+        img {
+            max-width: 221px;
+            padding-top: 20px;
+        }    
+    }
+
+    .navbar {
+        height: 100%;
+        @include flex-box(space-between);
+        flex-direction: column;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    
+    .menu_hamburguesa {
+        display: none;
+
+        &:checked + .ul_links {
+            height: calc(100vh - 150px);
+        }
+    }
+    
+    .list_icon {
+        color: $color_multi;
+        cursor: pointer;
+    }
+    
+    .ul_links {
+        width: 100%;
+        background-color: $color_fondo_links;
+        position: absolute;
+        top: 150px;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        @include flex-box();
+        flex-direction: column;
+        gap: 1.7rem;
+        transition: all 0.7s;
+    }
+    
+    .link {
+        font-size: 3rem;
+        color: $color_links_1;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include mq-tablet {
+        .menu_hamburguesa:checked + .ul_links {
+            display: none;
+        }
+        
+        .ul_links {
+            background-color: $color_fondo_seccion1;
+            position: static;
+            top: 0;
+            left: 0;
+            height: auto;
+            overflow: visible;
+            @include flex-box();
+            flex-direction: row;
+            gap: 0.7rem;
+            transition: none;
+        }
+    
+        .link {
+            font-size: 1.5rem;
+            color: $color_multi;
+            font-weight: bold;
+        }
+    
+        .list_icon {
+            display: none;
+        }
+    }
+
+    @include mq-desktop {
+        height: 110px;
+
+        .navbar {
+            flex-direction: row;
+        }
+
+        .navbar {
+            .div {
+                width: 40%;
+                @include flex-box (); }
+            }    
+        
+        .link {
+            font-size: 1rem;
+            
+        }
+        .ul_links {
+            padding-right: 3rem;
+            gap: 1.5rem;
+            justify-content: end;
+        }
+    
+        .div {
+            img {
+                padding-top: 0;
+            }
+        }
+    }
+}

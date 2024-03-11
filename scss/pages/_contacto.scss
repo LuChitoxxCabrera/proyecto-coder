@@ -1,0 +1,22 @@
+/* Contacto */
+
+main {
+    .parrafo_contacto {
+        text-align: justify;
+        padding: 0 50px;
+        background-color: $color_fondo_links;
+    }
+
+    .info {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    @include mq-tablet {
+        .parrafo_contacto {
+            padding: 10px 140px;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}

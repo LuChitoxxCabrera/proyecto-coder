@@ -1,0 +1,27 @@
+/* Empresas */
+
+main {
+    .parrafo_empresas {
+        text-align: justify;
+        padding: 0 50px;
+        background-color: $color_fondo_links;
+    }
+    .info {
+        div {
+            .logo {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include mq-tablet {
+        .parrafo_empresas {
+            padding: 10px 140px;
+            text-align: justify;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
